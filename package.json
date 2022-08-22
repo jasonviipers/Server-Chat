@@ -1,0 +1,44 @@
+{
+  "name": "chat_backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint src/**/*.ts",
+    "format": "eslint src/**/*.ts --fix",
+    "dev": "tsnd --respawn --transpile-only src/app.ts",
+    "serve": "pm2 start ecosystem.config.js --only development --watch --no-daemon",
+    "build": "tsc",
+    "start": "pm2 start ecosystem.config.js --only production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "faye": "^1.4.0",
+    "joi": "^17.6.0",
+    "lodash": "^4.17.21",
+    "nanoid": "^3.1.15",
+    "peer": "^0.6.1",
+    "permessage-deflate": "^0.1.7",
+    "sequelize": "^6.21.4",
+    "sqlite3": "^5.0.11",
+    "tslog": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/lodash": "^4.14.184",
+    "@typescript-eslint/eslint-plugin": "^5.33.1",
+    "@typescript-eslint/parser": "^5.33.1",
+    "eslint": "^8.22.0",
+    "pm2": "^5.2.0",
+    "prettier": "^2.7.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.7.4"
+  }
+}
