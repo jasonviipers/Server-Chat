@@ -21,6 +21,7 @@ if (AppHost) corsOptions.origin.push(AppUrl);
 
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
+app.disable('x-powered-by');
 
 new Router(app).initialize();
 new PeerServer(server, app).attach();
