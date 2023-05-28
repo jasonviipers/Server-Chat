@@ -6,10 +6,10 @@
   "scripts": {
     "lint": "eslint src/**/*.ts",
     "format": "eslint src/**/*.ts --fix",
-    "start": "tsnd --respawn --transpile-only src/app.ts",
+    "dev": "tsnd --respawn --transpile-only src/app.ts",
     "serve": "pm2 start ecosystem.config.js --only development --watch --no-daemon",
     "build": "tsc",
-    "start:s": "pm2 start ecosystem.config.js --only production"
+    "start": "pm2 start ecosystem.config.js --only production"
   },
   "keywords": [],
   "author": "",
